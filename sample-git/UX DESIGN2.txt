@@ -1,0 +1,27 @@
+setup node sass so we can compile our scss file in our css code
+  1.nodejs.org and download the latest version/long term support
+  2.create a folder eg scss sandbox and open the ide/text editor eg vscode,sublime,atom
+  3.go to terminal e.g on vs code and =>npm --version
+   
+  4.create  a package.json file=>npm init -y (-y to give us the defaults but yo can go throught the entire process and input vals)
+  5.install node sass=>npm install node-sass(node-sass will be listed as a dependency)
+  6.to use node-sass,we need to create a script  
+          {
+            "name": "front-end",
+            "version": "1.0.0",
+             "description": "",
+             "main": "index.js",
+             "scripts": {
+                "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+          },
+             "keywords": [],
+              "author": "",
+             "license": "ISC",
+             "dependencies": {
+                "node-sass": "^4.13.1"
+            }
+          }
+    7.create folders and files in the folder you are working in scss/main.scss  and dist
+    8.in the terminal enter npm run sass(this will constantly watch the scss folder and compile to dist as per
+         "scripts": {"sass": "node-sass -w scss/ -o dist/css/ --recursive"},
+
